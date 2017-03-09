@@ -113,12 +113,11 @@ class MCQquestionShowerViewController: UIViewController {
     */
     @IBAction func btnoption4method(_ sender: AnyObject) {
          if btnoption4.titleLabel?.text == answertempstore {
-            self.btnoption4.backgroundColor = UIColor.green
+            self.btnoption4.backgroundColor     = UIColor.green
             btnoption1.isUserInteractionEnabled = false
             btnoption2.isUserInteractionEnabled = false
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
-
             ScoreIncrement()
             let delaytimer = DispatchTime.now() + 1
 
@@ -140,12 +139,11 @@ class MCQquestionShowerViewController: UIViewController {
             btnoption2.isUserInteractionEnabled = false
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
-
             ScoreIncrement()
             let delaytimer = DispatchTime.now() + 1
              DispatchQueue.main.asyncAfter(deadline: delaytimer){
                 self.QuestionAnimation(self.view)
-                 self.QuestionGenarater()
+                self.QuestionGenarater()
             }
         }
         else
@@ -156,17 +154,16 @@ class MCQquestionShowerViewController: UIViewController {
     }
      @IBAction func btnoption2method(_ sender: AnyObject) {
         if btnoption2.titleLabel?.text == answertempstore {
-            self.btnoption2.backgroundColor = UIColor.green
+            self.btnoption2.backgroundColor     = UIColor.green
             btnoption1.isUserInteractionEnabled = false
             btnoption2.isUserInteractionEnabled = false
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
-
             ScoreIncrement()
             let delaytimer = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
                 self.QuestionAnimation(self.view)
-                 self.QuestionGenarater()
+                self.QuestionGenarater()
             }
         }
         else
@@ -203,7 +200,6 @@ class MCQquestionShowerViewController: UIViewController {
         btnoption4.layer.cornerRadius       = 10
         lblquestiontext.layer.cornerRadius  = 10
     }
-    
     func ButtonReseter()  {
         btnoption1.backgroundColor          = UIColor.white
         btnoption2.backgroundColor          = UIColor.white
