@@ -11,9 +11,11 @@ import UIKit
 class ScoreViewController: UIViewController {
 
     @IBOutlet weak var lblresultScore: UILabel!
+    @IBOutlet weak var lblcurrentscore: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         lblresultScore.text = "\(DefaultValueHelper.GetPrefwithKey("MCQScore") as String)"
+        lblcurrentscore.text = "\(Score)"
       
         
         if (UserDefaults.standard.value(forKey: "MCQScore") != nil)

@@ -26,7 +26,7 @@ class MCQquestionShowerViewController: UIViewController {
     var attempts = Int32()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.navigationBar.topItem!.title = "Back"
+         self.navigationController!.navigationBar.topItem!.title = "Back"
         self.view.isUserInteractionEnabled = true
         QuestionGenarater()
         ButtonlabelCornerRadiousSetter()
@@ -39,8 +39,6 @@ class MCQquestionShowerViewController: UIViewController {
         lblCurrentQuestionnoShower.text = " \(counter) "
         a = 0
     }
-
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         if UserDefaults.standard.value(forKey: "MCQScore") != nil
@@ -52,7 +50,6 @@ class MCQquestionShowerViewController: UIViewController {
                 DefaultValueHelper.setPrefWithValueAndKey(String(Score), key: "MCQScore")
             }
         }
-            
         else
         {
             DefaultValueHelper.setPrefWithValueAndKey(String(Score), key: "MCQScore")
@@ -257,7 +254,6 @@ class MCQquestionShowerViewController: UIViewController {
             btnoption2.isUserInteractionEnabled = false
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
-
             Scoredecrement()
             let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
@@ -299,4 +295,5 @@ class MCQquestionShowerViewController: UIViewController {
             
         }
     }
+
 }

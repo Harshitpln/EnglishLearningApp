@@ -235,7 +235,7 @@
                         <viewControllerLayoutGuide type="top" id="zIf-Jh-RWm"/>
                         <viewControllerLayoutGuide type="bottom" id="7xL-me-anr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0aW-0X-zmu">
+                    <view key="view" contentMode="scaleToFill" id="0aW-0X-zmu" customClass="LetsView" customModule="LetsPod">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -443,7 +443,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4gN-3r-aIx"/>
+                                    <constraint firstAttribute="height" constant="60" id="4gN-3r-aIx"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-cc-AbR">
@@ -469,17 +469,18 @@
                         <constraints>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="top" secondItem="4VA-Zd-oFA" secondAttribute="bottom" constant="8.5" id="4Wf-Wv-duM"/>
                             <constraint firstItem="m9H-2C-FFW" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Fl9-bF-5PG"/>
-                            <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="9dh-HW-W6A" secondAttribute="bottom" id="JML-vT-DS9"/>
+                            <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="9dh-HW-W6A" secondAttribute="bottom" constant="8" id="JML-vT-DS9"/>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Vny-5T-8tl"/>
                             <constraint firstItem="4VA-Zd-oFA" firstAttribute="top" secondItem="m9H-2C-FFW" secondAttribute="bottom" constant="8" id="ZA8-Dx-pZR"/>
                             <constraint firstItem="4VA-Zd-oFA" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="a0L-Nf-YXs"/>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="centerY" secondItem="8oo-Gi-Zop" secondAttribute="centerY" id="i9g-fA-edw"/>
-                            <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" id="oI0-va-hNw"/>
-                            <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" id="uZl-uT-PVV"/>
+                            <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" constant="8" id="oI0-va-hNw"/>
+                            <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" constant="8" id="uZl-uT-PVV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnTryagain" destination="z88-t2-0UF" id="LFk-pW-1Ts"/>
+                        <outlet property="lblcurrentscore" destination="m9H-2C-FFW" id="uHE-nf-vC9"/>
                         <outlet property="lblresultScore" destination="bfc-cc-AbR" id="7Fi-2j-DWV"/>
                     </connections>
                 </viewController>
@@ -495,9 +496,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qvy-3A-ao1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
