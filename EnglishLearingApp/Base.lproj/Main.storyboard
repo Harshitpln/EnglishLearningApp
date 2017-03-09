@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="667" height="311"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-fz-aDe">
@@ -77,6 +79,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4JI-6i-zmz">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH6-gD-sjd" customClass="LetsButton" customModule="LetsPod">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YH6-gD-sjd" secondAttribute="height" multiplier="1:1" id="d0Z-X1-gbr"/>
+                                                </constraints>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -141,8 +146,8 @@
                                             <constraint firstItem="vSq-V7-lyT" firstAttribute="top" secondItem="4JI-6i-zmz" secondAttribute="top" id="65s-Fe-VEC"/>
                                             <constraint firstAttribute="bottom" secondItem="YH6-gD-sjd" secondAttribute="bottom" id="6u1-eU-kUo"/>
                                             <constraint firstAttribute="bottom" secondItem="s1I-Ch-dlU" secondAttribute="bottom" id="L1Y-ZY-BZl"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="LDn-jS-BnU"/>
-                                            <constraint firstAttribute="height" priority="999" constant="150" id="OrT-zV-Yuf"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="LDn-jS-BnU"/>
+                                            <constraint firstAttribute="height" priority="999" constant="250" id="OrT-zV-Yuf"/>
                                             <constraint firstAttribute="bottom" secondItem="vSq-V7-lyT" secondAttribute="bottom" id="Zp8-E2-XbY"/>
                                             <constraint firstAttribute="bottom" secondItem="AUA-61-GW1" secondAttribute="bottom" id="mwg-cF-WGh"/>
                                             <constraint firstItem="YH6-gD-sjd" firstAttribute="top" secondItem="4JI-6i-zmz" secondAttribute="top" id="oFA-ix-ZRL"/>
@@ -175,22 +180,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.11267605633805" y="52.5"/>
+            <point key="canvasLocation" x="756" y="38"/>
         </scene>
         <!--Level View Controller-->
         <scene sceneID="H53-Aa-Ovb">
             <objects>
                 <tableViewController id="7jp-NL-O73" customClass="MCQLevelViewController" customModule="EnglishLearingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZgR-J1-08G">
-                        <rect key="frame" x="0.0" y="64" width="667" height="311"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MCQtableCellTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCQtableCellTableViewCell" rowHeight="70" id="jJt-zU-p48" customClass="MCQtableCellTableViewCell" customModule="EnglishLearingApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="667" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJt-zU-p48" id="upj-HZ-hF6">
-                                    <frame key="frameInset" width="667" height="69"/>
+                                    <frame key="frameInset" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-lv-31J">
@@ -231,92 +236,161 @@
                         <viewControllerLayoutGuide type="bottom" id="7xL-me-anr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0aW-0X-zmu">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJG-PZ-MlV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJG-PZ-MlV" customClass="LetsLabel" customModule="LetsPod">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Eqa-Sz-GkP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y5j-3x-kMt">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NFD-z1-YTT">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-7i-YSe">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                        <state key="normal" title="apple">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnoption1method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="Y2B-EA-Qlw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-qy-YNZ">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                        <state key="normal" title="banana">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnoption2method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="rJh-Tz-gdI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3u-uH-Vgc">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                        <state key="normal" title="grapes">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnoption3method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="13Z-sg-kFI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-Zo-pGE">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                        <state key="normal" title="guauva">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnoption4method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="iEj-Fh-hwo"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dpg-ai-SgB">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-7i-YSe" customClass="LetsButton" customModule="LetsPod">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                                <state key="normal" title="apple">
+                                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnoption1method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="Y2B-EA-Qlw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-qy-YNZ" customClass="LetsButton" customModule="LetsPod">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                                <state key="normal" title="banana">
+                                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnoption2method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="rJh-Tz-gdI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yln-jy-1T9">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3u-uH-Vgc" customClass="LetsButton" customModule="LetsPod">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                                <state key="normal" title="grapes">
+                                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnoption3method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="13Z-sg-kFI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-Zo-pGE" customClass="LetsButton" customModule="LetsPod">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                                <state key="normal" title="guauva">
+                                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnoption4method:" destination="hQV-ku-oUa" eventType="touchUpInside" id="iEj-Fh-hwo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFl-yV-PIb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HCv-aT-kd2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-HL-GCt">
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-5l-pXW">
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-TG-W9d">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-HL-GCt">
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-5l-pXW">
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="top" secondItem="Y0v-5l-pXW" secondAttribute="bottom" constant="5" id="1Cf-CC-rCB"/>
-                            <constraint firstAttribute="trailing" secondItem="WJG-PZ-MlV" secondAttribute="trailing" constant="5" id="1bV-Kx-RZa"/>
-                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="top" secondItem="zIf-Jh-RWm" secondAttribute="bottom" constant="33" id="CCs-Lp-zET"/>
-                            <constraint firstItem="Y5j-3x-kMt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WJG-PZ-MlV" secondAttribute="bottom" constant="30" id="Ey6-Xb-4vb"/>
-                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="top" secondItem="PFl-yV-PIb" secondAttribute="bottom" constant="5" id="L9s-qD-wAQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Y5j-3x-kMt" secondAttribute="trailing" constant="5" id="N55-Vw-RC6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0v-5l-pXW" secondAttribute="trailing" constant="5" id="PIP-Zh-d3E"/>
-                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="5" id="Rv3-0n-8SB"/>
-                            <constraint firstItem="PFl-yV-PIb" firstAttribute="top" secondItem="0aW-0X-zmu" secondAttribute="top" constant="5" id="XQI-lV-eUK"/>
-                            <constraint firstItem="Y0v-5l-pXW" firstAttribute="top" secondItem="0aW-0X-zmu" secondAttribute="topMargin" constant="5" id="ZG8-vM-Pee"/>
-                            <constraint firstItem="Y5j-3x-kMt" firstAttribute="top" secondItem="WJG-PZ-MlV" secondAttribute="bottom" priority="999" constant="30" id="b4X-xZ-9lI"/>
-                            <constraint firstItem="Dnt-HL-GCt" firstAttribute="bottom" secondItem="Y0v-5l-pXW" secondAttribute="bottom" id="bBr-aS-yP4"/>
-                            <constraint firstItem="Y5j-3x-kMt" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="5" id="bPO-Mg-5l9"/>
-                            <constraint firstItem="PFl-yV-PIb" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="5" id="fjg-GS-AEj"/>
-                            <constraint firstItem="Dnt-HL-GCt" firstAttribute="top" secondItem="Y0v-5l-pXW" secondAttribute="top" id="tor-dg-QIH"/>
-                            <constraint firstItem="Y0v-5l-pXW" firstAttribute="leading" secondItem="Dnt-HL-GCt" secondAttribute="trailing" constant="5" id="vw2-tN-2TJ"/>
+                            <constraint firstAttribute="trailing" secondItem="WJG-PZ-MlV" secondAttribute="trailing" constant="12" id="1bV-Kx-RZa"/>
+                            <constraint firstItem="7xL-me-anr" firstAttribute="top" secondItem="NFD-z1-YTT" secondAttribute="bottom" constant="20" id="7mT-Qw-Qvg"/>
+                            <constraint firstItem="bkX-TG-W9d" firstAttribute="top" secondItem="zIf-Jh-RWm" secondAttribute="bottom" constant="20" id="B5n-fb-GGe"/>
+                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="12" id="Rv3-0n-8SB"/>
+                            <constraint firstAttribute="trailing" secondItem="bkX-TG-W9d" secondAttribute="trailing" constant="20" id="SWo-fY-8Ev"/>
+                            <constraint firstItem="NFD-z1-YTT" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="20" id="Tp8-cZ-99O"/>
+                            <constraint firstItem="WJG-PZ-MlV" firstAttribute="top" secondItem="PFl-yV-PIb" secondAttribute="bottom" constant="16" id="Z7U-vc-dmF"/>
+                            <constraint firstItem="NFD-z1-YTT" firstAttribute="top" secondItem="WJG-PZ-MlV" secondAttribute="bottom" constant="20" id="ZEo-f3-ao4"/>
+                            <constraint firstItem="PFl-yV-PIb" firstAttribute="leading" secondItem="0aW-0X-zmu" secondAttribute="leading" constant="20" id="ajQ-vU-xSY"/>
+                            <constraint firstAttribute="trailing" secondItem="NFD-z1-YTT" secondAttribute="trailing" constant="20" id="jGb-Hm-FP0"/>
+                            <constraint firstItem="PFl-yV-PIb" firstAttribute="top" secondItem="zIf-Jh-RWm" secondAttribute="bottom" constant="20" id="nL2-Wn-7Hj"/>
+                            <constraint firstItem="NFD-z1-YTT" firstAttribute="height" secondItem="0aW-0X-zmu" secondAttribute="height" multiplier="1/2" priority="999" id="rbi-rl-Y1M"/>
                         </constraints>
                     </view>
                     <connections>
@@ -342,7 +416,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZpC-xl-w4e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8oo-Gi-Zop">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-HW-W6A">
@@ -353,6 +427,9 @@
                                         <state key="normal" title="TRY AGAIN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnTryagainEvent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="t6h-1a-oNz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-Jk-isN">
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -360,21 +437,55 @@
                                         <state key="normal" title="MAIN MENU">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnmainmenuevent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="nXp-xz-nsO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4gN-3r-aIx"/>
+                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-cc-AbR">
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Highest Score is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VA-Zd-oFA">
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9H-2C-FFW">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="1Ow-Zf-H1C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bfc-cc-AbR" firstAttribute="top" secondItem="4VA-Zd-oFA" secondAttribute="bottom" constant="8.5" id="4Wf-Wv-duM"/>
+                            <constraint firstItem="m9H-2C-FFW" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Fl9-bF-5PG"/>
                             <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="9dh-HW-W6A" secondAttribute="bottom" id="JML-vT-DS9"/>
+                            <constraint firstItem="bfc-cc-AbR" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Vny-5T-8tl"/>
+                            <constraint firstItem="4VA-Zd-oFA" firstAttribute="top" secondItem="m9H-2C-FFW" secondAttribute="bottom" constant="8" id="ZA8-Dx-pZR"/>
+                            <constraint firstItem="4VA-Zd-oFA" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="a0L-Nf-YXs"/>
+                            <constraint firstItem="bfc-cc-AbR" firstAttribute="centerY" secondItem="8oo-Gi-Zop" secondAttribute="centerY" id="i9g-fA-edw"/>
                             <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" id="oI0-va-hNw"/>
                             <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" id="uZl-uT-PVV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnTryagain" destination="z88-t2-0UF" id="LFk-pW-1Ts"/>
+                        <outlet property="lblresultScore" destination="bfc-cc-AbR" id="7Fi-2j-DWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paW-gL-Wy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2654" y="30"/>
+            <point key="canvasLocation" x="2653.2233883058475" y="29.600000000000001"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rms-jA-gd3">

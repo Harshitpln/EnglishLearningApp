@@ -10,8 +10,11 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    @IBOutlet weak var lblresultScore: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblresultScore.text = "\(DefaultValueHelper.GetPrefwithKey("MCQScore") as String)"
+      
         
         if (UserDefaults.standard.value(forKey: "MCQScore") != nil)
         {
@@ -32,7 +35,16 @@ class ScoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var btnTryagain: UIButton!
 
+    @IBAction func btnTryagainEvent(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
+        
+    }
+    @IBAction func btnmainmenuevent(_ sender: AnyObject) {
+    _ = self.navigationController?.popToRootViewController(animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

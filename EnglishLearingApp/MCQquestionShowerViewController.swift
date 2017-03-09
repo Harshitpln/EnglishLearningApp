@@ -6,6 +6,8 @@
 //  Copyright © 2017 Lokesh. All rights reserved.
 //
 import UIKit
+var Score = 0
+
 class MCQquestionShowerViewController: UIViewController {
     var counter = Int32()
     @IBOutlet weak var lblScore: UILabel!
@@ -31,7 +33,6 @@ class MCQquestionShowerViewController: UIViewController {
         self.navigationItem.title = "Level:- \(levelno)"
         var counter: Int = 0
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         counter = 1
