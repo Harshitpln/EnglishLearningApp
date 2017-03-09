@@ -1,0 +1,6 @@
+framework module LetsPod {
+  umbrella header "LetsPod-umbrella.h"
+
+  export *
+  module * { export * }
+}

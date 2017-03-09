@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>LetsPod-PodTarget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LetsPod.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EnglishLearingApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EnglishLearingAppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EnglishLearingAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2570CF1902CF1FBBB2D125722DABCF44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>697AB1D976AAB56BF9FB8498CB765357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6E1E3E55B3C0E9EF3D053AB17A34A09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E75E4144A77CB2EE15222EACC7AD75A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F812B6EE4011AF21B785A1248A9D1ABF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
