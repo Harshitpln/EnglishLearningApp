@@ -333,6 +333,49 @@
             </objects>
             <point key="canvasLocation" x="2039" y="30"/>
         </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Mkp-dU-myU">
+            <objects>
+                <viewController id="1Hk-Ww-Ktw" customClass="ScoreViewController" customModule="EnglishLearingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zir-S9-KfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZpC-xl-w4e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8oo-Gi-Zop">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-HW-W6A">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z88-t2-0UF">
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                        <state key="normal" title="TRY AGAIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-Jk-isN">
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                        <state key="normal" title="MAIN MENU">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="9dh-HW-W6A" secondAttribute="bottom" id="JML-vT-DS9"/>
+                            <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" id="oI0-va-hNw"/>
+                            <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" id="uZl-uT-PVV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paW-gL-Wy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="30"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rms-jA-gd3">
             <objects>
@@ -341,6 +384,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qvy-3A-ao1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -148,6 +148,11 @@ class MCQquestionShowerViewController: UIViewController {
         else
         {
             self.btnoption4.backgroundColor = UIColor.red
+            btnoption1.isUserInteractionEnabled = false
+            btnoption2.isUserInteractionEnabled = false
+            btnoption3.isUserInteractionEnabled = false
+            btnoption4.isUserInteractionEnabled = false
+
             Scoredecrement()
             let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
@@ -178,6 +183,11 @@ class MCQquestionShowerViewController: UIViewController {
         else
         {
             self.btnoption3.backgroundColor = UIColor.red
+            btnoption1.isUserInteractionEnabled = false
+            btnoption2.isUserInteractionEnabled = false
+            btnoption3.isUserInteractionEnabled = false
+            btnoption4.isUserInteractionEnabled = false
+
             Scoredecrement()
             let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
@@ -203,6 +213,11 @@ class MCQquestionShowerViewController: UIViewController {
         else
         {
             self.btnoption2.backgroundColor = UIColor.red
+            btnoption1.isUserInteractionEnabled = false
+            btnoption2.isUserInteractionEnabled = false
+            btnoption3.isUserInteractionEnabled = false
+            btnoption4.isUserInteractionEnabled = false
+
             Scoredecrement()
             let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
@@ -228,6 +243,11 @@ class MCQquestionShowerViewController: UIViewController {
         else
         {
             self.btnoption1.backgroundColor = UIColor.red
+            btnoption1.isUserInteractionEnabled = false
+            btnoption2.isUserInteractionEnabled = false
+            btnoption3.isUserInteractionEnabled = false
+            btnoption4.isUserInteractionEnabled = false
+
             Scoredecrement()
             let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
@@ -256,14 +276,11 @@ class MCQquestionShowerViewController: UIViewController {
     }
     
     func ScoreIncrement()  {
-        Score = Score + 2
+        Score = Score + 20
     }
     
     func Scoredecrement()  {
-        if(Score > 0)
-        {
-            Score = Score - 1
-        }
+        
     }
     func QuestionAnimation(_ myview: UIView) {
         UIView.transition(with: myview, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromTop, animations: { () -> Void in

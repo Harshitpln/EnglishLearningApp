@@ -11,6 +11,7 @@
 		3FFFF83E83C6E83939CC54DA /* Pods_EnglishLearingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FBCAFEE4E88BBD3BE6E24 /* Pods_EnglishLearingApp.framework */; };
 		B2103B8330CD5C6BAECADB25 /* Pods_EnglishLearingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3F705A82F1546705D6F27F /* Pods_EnglishLearingAppTests.framework */; };
 		FD0CC6D21E711ADF00C72FFE /* DefaultValueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */; };
+		FD0CC6D61E713B2700C72FFE /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CC6D51E713B2700C72FFE /* ScoreViewController.swift */; };
 		FDBEC2F51E6931C4007AD05F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEC2F41E6931C4007AD05F /* AppDelegate.swift */; };
 		FDBEC2F71E6931C4007AD05F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEC2F61E6931C4007AD05F /* ViewController.swift */; };
 		FDBEC2FA1E6931C4007AD05F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBEC2F81E6931C4007AD05F /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		CE2488F4B713798B645EF268 /* Pods-EnglishLearingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishLearingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishLearingApp/Pods-EnglishLearingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F83747D9080843697141973C /* Pods-EnglishLearingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishLearingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishLearingAppTests/Pods-EnglishLearingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultValueHelper.swift; sourceTree = "<group>"; };
+		FD0CC6D51E713B2700C72FFE /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		FDBEC2F11E6931C4007AD05F /* EnglishLearingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishLearingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBEC2F41E6931C4007AD05F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBEC2F61E6931C4007AD05F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				FDBEC2F41E6931C4007AD05F /* AppDelegate.swift */,
 				FDBEC2F61E6931C4007AD05F /* ViewController.swift */,
 				FDBEC2F81E6931C4007AD05F /* Main.storyboard */,
+				FD0CC6D51E713B2700C72FFE /* ScoreViewController.swift */,
 				FDC5EC2F1E6E960F00E5899F /* MCQquestionShowerViewController.swift */,
 				FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */,
 				FDC5EBEE1E6E739300E5899F /* MCQBean.swift */,
@@ -563,6 +566,7 @@
 				FDC5EBED1E6E734600E5899F /* Utility.swift in Sources */,
 				FDBEC32B1E69A181007AD05F /* MCQLevelViewController.swift in Sources */,
 				FDC5EC241E6E805600E5899F /* FMDatabaseAdditions.m in Sources */,
+				FD0CC6D61E713B2700C72FFE /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
