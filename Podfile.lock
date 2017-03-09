@@ -1,0 +1,12 @@
+PODS:
+  - LetsPod (2.0.1)
+
+DEPENDENCIES:
+  - LetsPod
+
+SPEC CHECKSUMS:
+  LetsPod: cca55a18c898da887ff245efb8b9046bcaacaa2a
+
+PODFILE CHECKSUM: 3ddb865e0e3dee4790f64e7187df29ef95e36611
+
+COCOAPODS: 1.2.0
