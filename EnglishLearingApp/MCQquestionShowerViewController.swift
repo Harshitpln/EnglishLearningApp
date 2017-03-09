@@ -31,6 +31,25 @@ class MCQquestionShowerViewController: UIViewController {
         self.navigationItem.title = "Level:- \(levelno)"
         var counter: Int = 0
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        if UserDefaults.standard.value(forKey: "MCQScore") != nil
+        {
+            let highscore:Int = Int((DefaultValueHelper.GetPrefwithKey("MCQScore") as String))!
+            print(highscore)
+            if (Score > highscore)
+            {
+                DefaultValueHelper.setPrefWithValueAndKey(String(Score), key: "MCQScore")
+            }
+        }
+            
+        else
+        {
+            DefaultValueHelper.setPrefWithValueAndKey(String(Score), key: "MCQScore")
+        }
+     }
+    
     func QuestionGenarater() -> () {
         if(Score < 0)
         {
@@ -130,11 +149,21 @@ class MCQquestionShowerViewController: UIViewController {
         {
             self.btnoption4.backgroundColor = UIColor.red
             Scoredecrement()
+            let delaytimer = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: delaytimer){
+                self.QuestionAnimation(self.view)
+                self.QuestionGenarater()
+            }
         }
     }
     @IBAction func btnoption3method(_ sender: AnyObject) {
+        
+        if btnoption1 == (sender as! UIButton) {
+            
+        }
+        
         if btnoption3.titleLabel?.text == answertempstore {
-            self.btnoption3.backgroundColor = UIColor.green
+            self.btnoption3.backgroundColor     = UIColor.green
             btnoption1.isUserInteractionEnabled = false
             btnoption2.isUserInteractionEnabled = false
             btnoption3.isUserInteractionEnabled = false
@@ -150,6 +179,11 @@ class MCQquestionShowerViewController: UIViewController {
         {
             self.btnoption3.backgroundColor = UIColor.red
             Scoredecrement()
+            let delaytimer = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: delaytimer){
+                self.QuestionAnimation(self.view)
+                self.QuestionGenarater()
+            }
         }
     }
      @IBAction func btnoption2method(_ sender: AnyObject) {
@@ -170,6 +204,11 @@ class MCQquestionShowerViewController: UIViewController {
         {
             self.btnoption2.backgroundColor = UIColor.red
             Scoredecrement()
+            let delaytimer = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: delaytimer){
+                self.QuestionAnimation(self.view)
+                self.QuestionGenarater()
+            }
         }
      }
     @IBAction func btnoption1method(_ sender: AnyObject) {
@@ -180,7 +219,7 @@ class MCQquestionShowerViewController: UIViewController {
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
             ScoreIncrement()
-            let delaytimer = DispatchTime.now() + 1
+            let delaytimer = DispatchTime.now() + 0.5
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
             self.QuestionAnimation(self.view)
             self.QuestionGenarater()
@@ -190,6 +229,11 @@ class MCQquestionShowerViewController: UIViewController {
         {
             self.btnoption1.backgroundColor = UIColor.red
             Scoredecrement()
+            let delaytimer = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: delaytimer){
+                self.QuestionAnimation(self.view)
+                self.QuestionGenarater()
+            }
         }
     }
     func ButtonlabelCornerRadiousSetter() {
@@ -216,10 +260,13 @@ class MCQquestionShowerViewController: UIViewController {
     }
     
     func Scoredecrement()  {
+        if(Score > 0)
+        {
             Score = Score - 1
+        }
     }
     func QuestionAnimation(_ myview: UIView) {
-        UIView.transition(with: myview, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromTop, animations: { () -> Void in
+        UIView.transition(with: myview, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromTop, animations: { () -> Void in
             
         }) { (completed) -> Void in
             

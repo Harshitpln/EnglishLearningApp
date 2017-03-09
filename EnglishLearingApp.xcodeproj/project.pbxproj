@@ -10,6 +10,7 @@
 		0F0C6EF1D6BAA1FD51859B0D /* Pods_EnglishLearingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96429F52CAC6C75BEF0CBA3B /* Pods_EnglishLearingAppUITests.framework */; };
 		3FFFF83E83C6E83939CC54DA /* Pods_EnglishLearingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FBCAFEE4E88BBD3BE6E24 /* Pods_EnglishLearingApp.framework */; };
 		B2103B8330CD5C6BAECADB25 /* Pods_EnglishLearingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3F705A82F1546705D6F27F /* Pods_EnglishLearingAppTests.framework */; };
+		FD0CC6D21E711ADF00C72FFE /* DefaultValueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */; };
 		FDBEC2F51E6931C4007AD05F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEC2F41E6931C4007AD05F /* AppDelegate.swift */; };
 		FDBEC2F71E6931C4007AD05F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEC2F61E6931C4007AD05F /* ViewController.swift */; };
 		FDBEC2FA1E6931C4007AD05F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBEC2F81E6931C4007AD05F /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		AC1FBCAFEE4E88BBD3BE6E24 /* Pods_EnglishLearingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishLearingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2488F4B713798B645EF268 /* Pods-EnglishLearingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishLearingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishLearingApp/Pods-EnglishLearingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F83747D9080843697141973C /* Pods-EnglishLearingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishLearingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishLearingAppTests/Pods-EnglishLearingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultValueHelper.swift; sourceTree = "<group>"; };
 		FDBEC2F11E6931C4007AD05F /* EnglishLearingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishLearingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBEC2F41E6931C4007AD05F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBEC2F61E6931C4007AD05F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				FDBEC2F61E6931C4007AD05F /* ViewController.swift */,
 				FDBEC2F81E6931C4007AD05F /* Main.storyboard */,
 				FDC5EC2F1E6E960F00E5899F /* MCQquestionShowerViewController.swift */,
+				FD0CC6D11E711ADF00C72FFE /* DefaultValueHelper.swift */,
 				FDC5EBEE1E6E739300E5899F /* MCQBean.swift */,
 				FDBEC32C1E69A1E5007AD05F /* MCQtableCellTableViewCell.swift */,
 				FDBEC2FE1E6931C4007AD05F /* Assets.xcassets */,
@@ -549,6 +552,7 @@
 				FDD9DBE71E6FD62E0078B368 /* ZFRippleButton.swift in Sources */,
 				FDC5EC231E6E805600E5899F /* FMDatabase.m in Sources */,
 				FDC5EC301E6E960F00E5899F /* MCQquestionShowerViewController.swift in Sources */,
+				FD0CC6D21E711ADF00C72FFE /* DefaultValueHelper.swift in Sources */,
 				FDD9DBE91E6FFF830078B368 /* readme.md in Sources */,
 				FDBEC2F71E6931C4007AD05F /* ViewController.swift in Sources */,
 				FDC5EC261E6E805600E5899F /* FMDatabaseQueue.m in Sources */,

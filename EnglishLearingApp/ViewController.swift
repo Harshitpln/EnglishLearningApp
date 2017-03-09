@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "DashBoard"
       //  self.view.backgroundColor = UIColor(patternImage: UIImage(named:"bgimage.png")!)
         // Do any additional setup after loading the view, typically from a nib.
