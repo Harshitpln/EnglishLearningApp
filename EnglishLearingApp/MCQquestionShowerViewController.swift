@@ -32,6 +32,14 @@ class MCQquestionShowerViewController: UIViewController {
         var counter: Int = 0
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        counter = 1
+        lblCurrentQuestionnoShower.text = " \(counter) "
+        a = 0
+    }
+
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         if UserDefaults.standard.value(forKey: "MCQScore") != nil
@@ -51,36 +59,35 @@ class MCQquestionShowerViewController: UIViewController {
      }
     
     func QuestionGenarater() -> () {
+
         if(Score < 0)
         {
             lblScore.text = "0"
         }
         lblScore.text = "\(Score)"
-        counter = counter + 1
-        questionstorearray = DBhelperobj.selectAllGroups()
+            questionstorearray = DBhelperobj.selectAllGroups()
         ButtonReseter()
         var b = NSMutableArray()
         print(counter)
-        if(counter < 11)
+        if(counter < 10)
         {
+            counter = counter + 1
+            lblCurrentQuestionnoShower.text = "\(counter)"
             print(a)
             mcqbeanobj = questionstorearray?.object(at: Int(a)) as? MCQBean
-            lblCurrentQuestionnoShower.text = "\(counter)"
-            lblquestiontext.text = " " + (mcqbeanobj?.Question)!
+             lblquestiontext.text = " " + (mcqbeanobj?.Question)!
             answertempstore = mcqbeanobj?.Answer
             a = a + 1
             OPtionSetter()
         }
         else
         {
-            let alert = UIAlertController()
-             alert.title = "Result!"
-            alert.message = "\(Score)"
-            var defaultAction = UIAlertAction(title: "OK", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-            })
-            alert.addAction(defaultAction)
-            self.present(alert, animated: true, completion: nil)
-            self.view.isUserInteractionEnabled = false
+            lblScore.text = "0"
+            let GotoVc_Signup:ScoreViewController = storyboard?.instantiateViewController(withIdentifier: "ScoreViewController") as! ScoreViewController
+            if let navigator = navigationController {
+                navigator.pushViewController(GotoVc_Signup, animated: true)
+            }
+            
              // Send to results Screen
         }
     }
@@ -163,9 +170,11 @@ class MCQquestionShowerViewController: UIViewController {
     }
     @IBAction func btnoption3method(_ sender: AnyObject) {
         
-        if btnoption1 == (sender as! UIButton) {
-            
-        }
+        let btn = sender as? ZFRippleButton
+        btn?.ripplePercent = 50
+        btn?.rippleColor = .white
+        btn?.shadowRippleEnable = true
+
         
         if btnoption3.titleLabel?.text == answertempstore {
             self.btnoption3.backgroundColor     = UIColor.green

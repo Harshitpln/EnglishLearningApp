@@ -12,7 +12,18 @@ class ScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (UserDefaults.standard.value(forKey: "MCQScore") != nil)
+        {
+            print(DefaultValueHelper.GetPrefwithKey("MCQScore") as String)
+        }
+        else
+        {
+            print("0")
+        }
 
+        
+        
         // Do any additional setup after loading the view.
     }
 

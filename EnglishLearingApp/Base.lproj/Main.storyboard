@@ -336,7 +336,7 @@
         <!--Score View Controller-->
         <scene sceneID="Mkp-dU-myU">
             <objects>
-                <viewController id="1Hk-Ww-Ktw" customClass="ScoreViewController" customModule="EnglishLearingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Hk-Ww-Ktw" customClass="ScoreViewController" customModule="EnglishLearingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zir-S9-KfK"/>
                         <viewControllerLayoutGuide type="bottom" id="ZpC-xl-w4e"/>
