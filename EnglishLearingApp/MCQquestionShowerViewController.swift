@@ -26,7 +26,8 @@ class MCQquestionShowerViewController: UIViewController {
     var attempts = Int32()
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.navigationController!.navigationBar.topItem!.title = "Back"
+         self.navigationController!.navigationBar.topItem!.title = ""
+        
         self.view.isUserInteractionEnabled = true
         QuestionGenarater()
         ButtonlabelCornerRadiousSetter()
@@ -38,6 +39,7 @@ class MCQquestionShowerViewController: UIViewController {
         counter = 1
         lblCurrentQuestionnoShower.text = " \(counter) "
         a = 0
+        Score = 0
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
@@ -82,6 +84,8 @@ class MCQquestionShowerViewController: UIViewController {
         {
             lblScore.text = "0"
             let GotoVc_Signup:ScoreViewController = storyboard?.instantiateViewController(withIdentifier: "ScoreViewController") as! ScoreViewController
+            GotoVc_Signup.scoreforresult = Int32(Score)
+            
             if let navigator = navigationController {
                 navigator.pushViewController(GotoVc_Signup, animated: true)
             }
@@ -255,7 +259,7 @@ class MCQquestionShowerViewController: UIViewController {
             btnoption3.isUserInteractionEnabled = false
             btnoption4.isUserInteractionEnabled = false
             Scoredecrement()
-            let delaytimer = DispatchTime.now() + 0.5
+            let delaytimer = DispatchTime.now() + 0.10
             DispatchQueue.main.asyncAfter(deadline: delaytimer){
                 self.QuestionAnimation(self.view)
                 self.QuestionGenarater()
@@ -289,7 +293,7 @@ class MCQquestionShowerViewController: UIViewController {
         
     }
     func QuestionAnimation(_ myview: UIView) {
-        UIView.transition(with: myview, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromTop, animations: { () -> Void in
+        UIView.transition(with: myview, duration: 0.40, options: UIViewAnimationOptions.transitionFlipFromRight, animations: { () -> Void in
             
         }) { (completed) -> Void in
             

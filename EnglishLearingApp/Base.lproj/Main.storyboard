@@ -415,70 +415,85 @@
                         <viewControllerLayoutGuide type="top" id="zir-S9-KfK"/>
                         <viewControllerLayoutGuide type="bottom" id="ZpC-xl-w4e"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8oo-Gi-Zop">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8oo-Gi-Zop">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-HW-W6A">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z88-t2-0UF">
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
-                                        <state key="normal" title="TRY AGAIN">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnTryagainEvent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="t6h-1a-oNz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-Jk-isN">
-                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
-                                        <state key="normal" title="MAIN MENU">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnmainmenuevent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="nXp-xz-nsO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4gN-3r-aIx"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-cc-AbR">
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Highest Score is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VA-Zd-oFA">
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9H-2C-FFW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9H-2C-FFW">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="1Ow-Zf-H1C"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0W-cv-a4G">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-HW-W6A">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z88-t2-0UF">
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                                <state key="normal" title="TRY AGAIN">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnTryagainEvent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="t6h-1a-oNz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-Jk-isN">
+                                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                                <state key="normal" title="MAIN MENU">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnmainmenuevent:" destination="1Hk-Ww-Ktw" eventType="touchUpInside" id="nXp-xz-nsO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30259403586387634" green="0.8482850193977356" blue="0.99566870927810669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4gN-3r-aIx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9dh-HW-W6A" secondAttribute="bottom" id="Adm-Qq-dlC"/>
+                                    <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="L0W-cv-a4G" secondAttribute="leading" constant="8" id="Etj-fv-Haa"/>
+                                    <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="L0W-cv-a4G" secondAttribute="leading" constant="8" id="LlX-U5-g4L"/>
+                                    <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" constant="8" id="YOJ-VX-cSU"/>
+                                    <constraint firstAttribute="height" constant="128" id="blQ-y7-uBT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" constant="8" id="sTI-x5-FEu"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25733831524848938" green="0.60389101505279541" blue="0.95557087659835815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="top" secondItem="4VA-Zd-oFA" secondAttribute="bottom" constant="8.5" id="4Wf-Wv-duM"/>
+                            <constraint firstItem="L0W-cv-a4G" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" id="7jO-6e-gbd"/>
                             <constraint firstItem="m9H-2C-FFW" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Fl9-bF-5PG"/>
-                            <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="9dh-HW-W6A" secondAttribute="bottom" constant="8" id="JML-vT-DS9"/>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="Vny-5T-8tl"/>
                             <constraint firstItem="4VA-Zd-oFA" firstAttribute="top" secondItem="m9H-2C-FFW" secondAttribute="bottom" constant="8" id="ZA8-Dx-pZR"/>
                             <constraint firstItem="4VA-Zd-oFA" firstAttribute="centerX" secondItem="8oo-Gi-Zop" secondAttribute="centerX" id="a0L-Nf-YXs"/>
+                            <constraint firstAttribute="trailing" secondItem="L0W-cv-a4G" secondAttribute="trailing" id="i8Z-vo-i6G"/>
                             <constraint firstItem="bfc-cc-AbR" firstAttribute="centerY" secondItem="8oo-Gi-Zop" secondAttribute="centerY" id="i9g-fA-edw"/>
-                            <constraint firstItem="9dh-HW-W6A" firstAttribute="leading" secondItem="8oo-Gi-Zop" secondAttribute="leading" constant="8" id="oI0-va-hNw"/>
-                            <constraint firstAttribute="trailing" secondItem="9dh-HW-W6A" secondAttribute="trailing" constant="8" id="uZl-uT-PVV"/>
+                            <constraint firstItem="ZpC-xl-w4e" firstAttribute="top" secondItem="L0W-cv-a4G" secondAttribute="bottom" id="yJd-OV-akD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomview" destination="L0W-cv-a4G" id="H5h-l7-hvB"/>
                         <outlet property="btnTryagain" destination="z88-t2-0UF" id="LFk-pW-1Ts"/>
                         <outlet property="lblcurrentscore" destination="m9H-2C-FFW" id="uHE-nf-vC9"/>
                         <outlet property="lblresultScore" destination="bfc-cc-AbR" id="7Fi-2j-DWV"/>
@@ -493,12 +508,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UUh-tm-STs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qvy-3A-ao1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="qvy-3A-ao1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.96664398908615112" green="0.59964668750762939" blue="0.0050083836540579796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

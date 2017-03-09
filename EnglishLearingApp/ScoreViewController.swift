@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import LetsPod
 
 class ScoreViewController: UIViewController {
+    var scoreforresult = Int32()
 
     @IBOutlet weak var lblresultScore: UILabel!
     @IBOutlet weak var lblcurrentscore: UILabel!
+    @IBOutlet weak var bottomview: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.topItem!.title = ""
+
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        bottomview.layer.mask = maskLayer
+        
         lblresultScore.text = "\(DefaultValueHelper.GetPrefwithKey("MCQScore") as String)"
-        lblcurrentscore.text = "\(Score)"
+        lblcurrentscore.text = "\(scoreforresult)"
       
         
         if (UserDefaults.standard.value(forKey: "MCQScore") != nil)
