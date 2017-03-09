@@ -205,10 +205,10 @@ class MCQquestionShowerViewController: UIViewController {
     }
     
     func ButtonReseter()  {
-        btnoption1.backgroundColor = UIColor.white
-        btnoption2.backgroundColor = UIColor.white
-        btnoption3.backgroundColor = UIColor.white
-        btnoption4.backgroundColor = UIColor.white
+        btnoption1.backgroundColor          = UIColor.white
+        btnoption2.backgroundColor          = UIColor.white
+        btnoption3.backgroundColor          = UIColor.white
+        btnoption4.backgroundColor          = UIColor.white
         btnoption1.isUserInteractionEnabled = true
         btnoption2.isUserInteractionEnabled = true
         btnoption3.isUserInteractionEnabled = true
